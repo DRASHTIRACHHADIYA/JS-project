@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <header class="topbar">
+            <div class="top-left">
+                <span>Follow On:</span>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <div class="top-center">
+                <a href="#" class="logo">FOOD CAFE</a>
+            </div>
+
+            <div class="top-right">
+                <div class="lang-dropdown">
+                    <span class="lang-btn">English</span>
+                </div>
+                <a href="#" class="login">LOGIN</a>
+            </div>
+        </header>
+
+        <!--  -->
+
+        <nav class="navbar">
+            <div class="dropdown_main">
+                <li onclick="homeClick()" class="list">Home</li>
+                <div class="content" id="home">
+                    <li>home1</li>
+                    <li>home2</li>
+                    <li>home3</li>
+                    <li>home4</li>
+                </div>
+            </div>
+
+            <div class="dropdown_main">
+                <li onclick="aboutClick()" class="list">About Us</li>
+                <div class="content" id="about">
+                    <li>about_us1</li>
+                    <li>about_us2</li>
+                    <li>about_us3</li>
+                    <li>about_us4</li>
+                </div>
+            </div>
+
+            <div class="dropdown_main">
+                <li onclick="serviceClick()" class="list">Services</li>
+                <div class="content" id="service">
+                    <li>service1</li>
+                    <li>service2</li>
+                    <li>service3</li>
+                    <li>service4</li>
+                </div>
+            </div>
+
+            <div class="dropdown_main">
+                <li onclick="galleryClick()" class="list">Gallery</li>
+                <div class="content" id="gallery">
+                    <li>gallery1</li>
+                    <li>gallery2</li>
+                    <li>gallery3</li>
+                    <li>gallery4</li>
+                </div>
+            </div>
+
+            <div class="dropdown_main">
+                <li onclick="contactClick()" class="list">Contact Us</li>
+                <div class="content" id="contact">
+                    <li>contact1</li>
+                    <li>contact2</li>
+                    <li>contact3</li>
+                    <li>contact4</li>
+                </div>
+            </div>   
+        </nav>
+         <div class="menu-toggle" onclick="toggleMenu()">
+        ⋮⋮⋮
+    </div>
+    </header>
+
+
+    <!-- LOGIN PANEL -->
+    <form onsubmit="return validatelogin()">
+        <div class="login-panel" id="loginPanel">
+            <div class="login-box">
+
+                <span class="close-btn" id="closeBtn">❌</span>
+
+               <p id="emailErr"></p>
+  <p id="passErr"></p>
+
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+
+  <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="xx">
+        <div class="container">
+            <div class="image-container">
+                <img src="img1.jpg" alt="" class="active" id="content1">
+                <img src="img2.jpg" alt="" id="content2">
+                <img src="img3.jpg" alt="" id="content3">
+                <img src="img4.jpg" alt="" id="content4">
+                <img src="img5.jpg" alt="" id="content5">
+            </div>
+        </div>
+    </div>
+    <!-- 2ND PAGE -->
+    <div class="n2">
+        <div class="navbarr">
+            <button id="homee">Home</button>
+            <button id="servicee">Service</button>
+            <button id="contactt">Contact</button>
+        </div>
+
+        <div class="image-box">
+            <img id="mainImage" src="img1.jpg" alt="image">
+        </div>
+    </div>
+
+    <!-- 3RD PAGE -->
+    <div class="back_g">
+        <div class="filter-buttons">
+
+            <button onclick="filterItem('coffee')">Coffee</button>
+            <button onclick="filterItem('tea')">Tea</button>
+            <button onclick="filterItem('cold-drink')">cold-drinks</button>
+            <button onclick="filterItem('Fastfood')">Fastfood</button>
+            <button onclick="filterItem('all')">All</button>
+        </div>
+
+
+        <div class="gallery">
+
+            <!-- COFFEE -->
+            <div class="card item coffee">
+                <img src="c1.jpg">
+                <h3>Cappuccino</h3>
+            </div>
+
+            <div class="card item coffee">
+                <img src="c2.jpg">
+                <h3>Cold coffee</h3>
+            </div>
+
+            <div class="card item coffee">
+                <img src="c3.jpg">
+                <h3>Espresso</h3>
+            </div>
+            <div class="card item coffee">
+                <img src="c4.jpg">
+                <h3>Cold brew</h3>
+            </div>
+
+            <!-- TEA -->
+            <div class="card item tea">
+                <img src="t1.jpg">
+                <h3>Tea</h3>
+            </div>
+
+            <div class="card item tea">
+                <img src="t2.jpg">
+                <h3>Green tea</h3>
+            </div>
+            <div class="card item tea">
+                <img src="t3.jpg">
+                <h3>oolong tea</h3>
+            </div>
+
+            <div class="card item tea">
+                <img src="t4.jpg">
+                <h3>black tea</h3>
+            </div>
+
+            <!-- FAST-FOOD -->
+            <div class="card item Fastfood">
+                <img src="f1.jpg">
+                <h3>Burger</h3>
+            </div>
+            <div class="card item Fastfood">
+                <img src="f2.jpg">
+                <h3>Vadapav</h3>
+            </div>
+            <div class="card item Fastfood">
+                <img src="f3.jpg">
+                <h3>Pizza</h3>
+            </div>
+            <div class="card item Fastfood">
+                <img src="f4.jpg">
+                <h3>Taco</h3>
+            </div>
+
+            <!-- COLD-DRINK -->
+            <div class="card item cold-drink">
+                <img src="d1.jpg" alt="">
+                <h3>Pepsi</h3>
+            </div>
+
+            <div class="card item cold-drink">
+                <img src="d2.jpg" alt="">
+                <h3>Sprite</h3>
+            </div>
+
+            <div class="card item cold-drink">
+                <img src="d4.jpg" alt="">
+                <h3>Thums-up</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 4th PAGE -->
+
+    <div class="contact-section">
+        <div class="bg-image"></div>
+
+        <div class="contact-content">
+            <h2>GET IN TOUCH</h2>
+
+            <form onsubmit="return validateContactForm()">
+
+                <div class="form-row">
+                    <input type="text" id="name" placeholder="Name">
+                    <input type="text" id="email" placeholder="Email">
+                </div>
+
+                <p id="nameErr"></p>
+                <p id="emailErr"></p>
+
+                <input type="password" id="password" placeholder="Password">
+                <p id="passErr"></p>
+
+                <textarea id="message" placeholder="Your Message"></textarea>
+                <p id="msgErr"></p>
+
+                <button type="submit">Submit</button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div class="abt_back">
+        <div class="about">
+            <div class="left">
+                <div class="box">OUR STORY</div>
+                <div class="box">MISSION</div>
+                <div class="box">VISION</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>

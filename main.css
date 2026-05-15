@@ -11,46 +11,55 @@
   color: white;
   padding: 15px 200px;
   font-family: Arial, sans-serif;
-}
 
-.top-left {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  .top-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 
-  a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-left: 2px solid rgba(255, 255, 255, 0.3);
-    padding-left: 10px;
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-left: 2px solid rgba(255, 255, 255, 0.3);
+      padding-left: 10px;
 
-    &:hover {
-      background-color: rgb(231, 162, 105);
+      &:hover {
+        background-color: rgb(231, 162, 105);
+      }
     }
   }
-}
-
-.top-center {
-  font-size: 28px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-decoration: none;
-  color: white;
-}
 
 
-.top-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  .top-center {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+
+  }
+
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: white;
+  }
+
+
+  .top-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
 }
+
+
+
+
+
 
 /* LOGIN */
 
